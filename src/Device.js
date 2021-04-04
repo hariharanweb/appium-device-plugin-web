@@ -10,16 +10,16 @@ const Device = ({ device }) => {
         platform, name, udid, busy
     } = device
     return (
-        <Container className="device-container">
-            <Row className="device-row d-flex justify-content-between">
-                <Col>
+        <div>
+            <div class="d-flex flex-row bd-highlight mb-1 justify-content-between device-row">
+                <div class="p-2 bd-highlight">
                     {
                         platform === 'android' ?
                             <FontAwesomeIcon icon={faAndroid} color='green' /> :
                             <FontAwesomeIcon icon={faApple} />
                     }
-                </Col>
-                <Col>
+                </div>
+                <div class="p-2 bd-highlight flex-fill">
                     <OverlayTrigger
                         placement="bottom"
                         overlay={
@@ -31,15 +31,23 @@ const Device = ({ device }) => {
                             {name ? name : udid}
                         </div>
                     </OverlayTrigger>
-                </Col>
-                <Col>
+                </div>
+                <div class="p-2 bd-highlight">
                     {
-                        busy ? <FontAwesomeIcon icon={faMobileAlt} color='red' /> :
-                            <FontAwesomeIcon icon={faMobileAlt} color='green' />
+                        busy ?
+                            <div>
+                                <FontAwesomeIcon icon={faMobileAlt} color='red' />
+                                &nbsp;Busy
+                            </div>
+                            :
+                            <div>
+                                <FontAwesomeIcon icon={faMobileAlt} color='green' />
+                                &nbsp;Free
+                            </div>
                     }
-                </Col>
-            </Row>
-        </Container >
+                </div>
+            </div>
+        </div>
     )
 }
 
