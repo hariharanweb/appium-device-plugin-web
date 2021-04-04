@@ -18,7 +18,7 @@
         "sdk": "13.5",
         "platform": "iOS",
         "busy": false,
-        "realDevice": false
+        "realDevice": true
     },
     {
         "name": "iPhone 11",
