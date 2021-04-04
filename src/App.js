@@ -1,7 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import deviceList from './sample.json'
-import Devices from './Devices'
+import DevicesContainer from './DevicesContainer'
 
-const App = () => <Devices devices={deviceList} />
+const App = () =>
+  <div>
+    <h1 className="mb-4 mt-4">Appium Device Plugin</h1>
+    <DevicesContainer />
+  </div>
 export default App;

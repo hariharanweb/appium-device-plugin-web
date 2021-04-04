@@ -1,4 +1,4 @@
-import { Row, Col, Container, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import './Device.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,7 +11,7 @@ const Device = ({ device }) => {
     } = device
     return (
         <div>
-            <div class="d-flex flex-row bd-highlight mb-1 justify-content-between device-row">
+            <div class="d-flex flex-row bd-highlight mb-1 justify-content-between device-row ml-2 mr-2">
                 <div class="p-2 bd-highlight">
                     {
                         platform === 'android' ?
